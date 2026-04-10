@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your ShiftVoice Account</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: #ffffff;
+            margin: 20px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .logo .primary {
+            color: #0ea5e9;
+        }
+        .logo .secondary {
+            color: #1e293b;
+        }
+        .logo .primary {
+            color: #2563eb;
+        }
+        .logo .secondary {
+            color: #1a365d;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 20px 0;
+        }
+        .code-container {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .code {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+            letter-spacing: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .message {
+            font-size: 16px;
+            color: #64748b;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 14px;
+            color: #64748b;
+            text-align: center;
+        }
+        .warning {
+            background-color: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #92400e;
+        }
+        .support {
+            color: #0ea5e9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <span class="primary">Shift</span><span class="secondary">Voice</span>
+            </div>
+        </div>
+        
+        <h1 class="title">Verify Your Email Address</h1>
+        
+        <p class="message">
+            Hi{% if user.first_name %} {{ user.first_name }}{% endif %}{% if user.developer.company_name %} from {{ user.developer.company_name }}{% endif %},
+        </p>
+        
+        <p class="message">
+            Welcome to ShiftVoice{% if user.developer.company_name %} team at {{ user.developer.company_name }}{% endif %}! To complete your account setup and start building with our voice API, please verify your email address.
+        </p>
+        
+        <div class="code-container">
+            <div class="code">{{ code }}</div>
+        </div>
+        
+        <p class="message">
+            Enter this 6-digit code in the verification form to activate your account. This code will expire in 10 minutes for security reasons.
+        </p>
+        
+        <div class="warning">
+            <strong>Security Note:</strong> If you didn't request this verification, please ignore this email. Your account remains secure.
+        </div>
+        
+        <div class="footer">
+            <p>
+                Need help? Contact our support team at 
+                <a href="mailto:hello@shiftvoice.com" class="support">hello@shiftvoice.com</a>
+            </p>
+            <p>
+                © 2024 ShiftVoice. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

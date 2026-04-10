@@ -1,0 +1,6 @@
+projectKey=shiftvoice
+serverUrl=http://localhost:9000
+serverVersion=26.3.0.120487
+dashboardUrl=http://localhost:9000/dashboard?id=shiftvoice
+ceTaskId=91e39ff4-7b32-4f68-9d65-c206e8e37157
+ceTaskUrl=http://localhost:9000/api/ce/task?id=91e39ff4-7b32-4f68-9d65-c206e8e37157
